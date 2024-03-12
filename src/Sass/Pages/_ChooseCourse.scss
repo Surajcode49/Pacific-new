@@ -1,0 +1,45 @@
+@import '../Abstracts/Mixin';
+
+.chooseCourse-main {
+    max-width: 100vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .course-title {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 2rem 0rem;
+        color: rgb(72, 72, 72);
+    }
+
+    .course-main-lists {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        color: rgb(79, 78, 78);
+        text-align: justify;
+        padding: 0.5rem 2rem;
+
+        @include mobile{
+            padding: 0;
+        }
+
+        .course-list-body {
+            // list-style: decimal;
+            padding: 0.5rem 0.5rem;
+
+            .course-list-title {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.chooseCourse-parallax-1 {
+    background: url('../../Assets/how\ to\ chose\ a\ carere.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    height: 80vh;
+}

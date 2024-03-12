@@ -1,0 +1,52 @@
+@import '../Abstracts/Mixin';
+
+.guideparent-main{
+    max-width: 100vw;
+    padding: 2rem;
+
+    .guideparent-title{
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 2rem 0rem;
+        color: rgb(72, 72, 72);
+    }
+    .guideparent-about{
+        font-size: 1rem;
+        color: rgb(79, 78, 78);
+        padding-bottom: 2rem;
+        text-align: justify;
+    }
+    .guideparent-list{
+        font-size: 1rem;
+        color: rgb(79, 78, 78);
+        text-align: justify;
+
+        .guideparent-list-main-title{
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .guideparent-main-lists{
+            // list-style: decimal;
+            padding: 1rem 2rem;
+
+            @include mobile{
+                padding: 0;
+            }
+
+            .guideparent-list-body{
+                padding: 0.5rem 0.5rem;
+                .blogparent-list-title{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.guide-parallax-1 {
+    background: url('../../Assets/guid\ for\ parents.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    height: 80vh;
+}

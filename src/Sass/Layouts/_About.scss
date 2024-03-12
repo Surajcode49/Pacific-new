@@ -1,0 +1,40 @@
+@import '../Abstracts/Mixin';
+
+.about-part {
+    // background-color: red;
+    max-width: 100vw;
+    padding: 4rem;
+
+    @include mobile{
+        padding: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        font-weight: bolder;
+        color: rgb(46, 45, 45);
+    }
+
+    .about-content {
+        font-size: 1.2rem;
+        text-align: justify;
+
+        @include mobile{
+            font-size: 1.18rem;
+        }
+    }
+
+    .vision-title {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: rgb(46, 45, 45);
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .vission-content {
+        font-size: 1.1rem;
+    }
+
+}

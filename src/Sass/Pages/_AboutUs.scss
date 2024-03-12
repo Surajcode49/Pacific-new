@@ -1,0 +1,242 @@
+@import '../Abstracts/Mixin';
+
+
+.aboutus-main-page-part {
+    max-width: 100vw;
+
+}
+
+// .about-us-main {
+//     max-width: 100vw;
+
+//     .about-photo {
+//         display: flex;
+//         justify-content: center;
+//         align-content: center;
+
+//         .about-us-header {
+//             width: 40vw;
+//             background-image: url("../../Assets/20240110_192411_0000.png");
+//             background-size: cover;
+//             // min-height: 100vh;
+//             height: 70vh;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+
+//             @include mobile {
+//                 min-height: 24vh;
+//             }
+//         }
+//     }
+
+//     .lower-content {
+//         padding: 4rem 3rem;
+//         width: 100%;
+
+//         .about-heading {
+//             font-size: 2rem;
+//             font-weight: 600;
+//             color: rgb(50, 49, 49);
+//         }
+
+//         .about-sub-content {
+//             font-size: 0.8rem;
+//             text-align: justify;
+//             font-weight: 600;
+//             color: rgb(72, 71, 71);
+//             // background-color: red;
+//         }
+
+//         .about-para-content {
+//             padding-top: 2rem;
+//             text-align: justify;
+//             color: rgb(72, 71, 71);
+//         }
+
+//         .about-team {
+//             padding-top: 4rem;
+
+//             .about-team-heading {
+//                 font-weight: 600;
+//                 font-size: 1.8rem;
+//                 padding-bottom: 2rem;
+//             }
+//         }
+
+//     }
+// }
+
+
+/* @import url('') */
+
+
+
+// body {
+//     background-color: whitesmoke;
+//     text-align: justify;
+// }
+
+// .paralax-heading{
+//     font-size: 120px;
+//     text-align: center;
+//     color: rgba(255, 255, 255);
+
+// }
+.main-abt-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .parallax-1 {
+        width: 50vw;
+        height: auto;
+
+        @include mobile {
+            width: 100vw;
+            height: auto;
+        }
+
+        .abtimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        // opacity: 0.7;
+    }
+}
+
+.about-expertise-main {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+
+    
+
+    .about-expertise-list {
+        font-weight: 600;
+        color: rgb(94, 92, 92);
+    }
+}
+
+.about-lists {
+    padding-left: 2rem;
+    text-align: justify;
+
+    .about-list-heading-main {
+        font-size: 1.2rem;
+        font-weight: 700;
+        // padding-bottom: 0.5rem;
+        color: rgb(94, 92, 92);
+    }
+
+    p {
+        padding: 1rem 0.54rem;
+    }
+}
+
+// .parallax-2 {
+//     background: url('../../Assets/about-us.webp') no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     background-attachment: fixed;
+//     height: 80vh;
+// }
+
+// .parallax-3 {
+//     background: url('../../Assets/about-us.webp') no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     background-attachment: fixed;
+//     height: 80vh;
+// }
+// .parallax-4 {
+//     background: url('../../Assets/about-us.webp') no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     background-attachment: fixed;
+//     height: 80vh;
+// }
+// .parallax-inner{
+//     padding: 10% 0;
+// }
+.parallax-subhead {
+    padding-left: 2rem;
+    font-size: 32px;
+    color: #555;
+    // letter-spacing: 2px;
+
+    font-weight: 700;
+
+    @include mobile {
+        width: 80vw;
+        font-size: 24px;
+        // padding-left: 0;
+    }
+}
+
+.about-sub-content {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    @include mobile {
+        width: 90%;
+    }
+}
+
+.parallax-content {
+    font-size: 15px;
+    color: #202020;
+    text-align: justify;
+    line-height: 30px;
+    margin: 0 2rem 40px;
+
+    @include mobile {
+        width: 90%;
+    }
+}
+
+.about-parallax-feature {
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+    line-height: 30px;
+    margin: 0 3rem 10px;
+
+    @include mobile {
+        width: 90%;
+    }
+
+    .about-features {
+        list-style: circle;
+        text-align: left;
+
+        .feature-list-part {
+            width: 100%;
+        }
+
+    }
+}
+
+.abt-lower-content{
+    @include mobile{
+        max-width: 90vw;
+    }
+}
+.parallax-subhead-1{
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 700;
+    @include mobile{
+        padding-left: 0;
+
+    }
+}
+.about-expertise-main-1{
+    padding-bottom: 2rem;
+    @include mobile{
+        padding-left: 0;
+    }
+}

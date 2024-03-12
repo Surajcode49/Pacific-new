@@ -1,0 +1,52 @@
+@import '../Abstracts/Mixin';
+
+.benifits-main{
+    max-width: 100vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .beifits-main-title{
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 2rem 0rem;
+        color: rgb(72, 72, 72);
+    }
+
+    .benifits-main-list{
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        color: rgb(79, 78, 78);
+        text-align: justify;
+        padding: 0.5rem 2rem;
+
+        @include mobile{
+            padding: 0;
+        }
+
+        .benifits-list-main{
+            // list-style: decimal;
+            padding: 0.5rem 0.5rem;
+            
+            .benifit-list-title{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// .benifits-parallax-1 {
+//     background: url('../../Assets/benifit\ of\ study.webp') no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     background-attachment: fixed;
+//     height: 80vh;
+// }
+.benifit-img{
+    background: url('../../Assets/benifit.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    height: 80vh;
+}

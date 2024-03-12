@@ -1,0 +1,77 @@
+@import '../Abstracts/Mixin';
+
+.about-section-main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // max-width: 100px;
+    max-width: 100vw;
+
+    @include mobile{
+        max-width: 100vw;
+    }
+    .about-section-part{
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+        // width: 100%;
+        // text-align: center;
+
+        .about-title{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: 2rem;
+            // color: rgb(201, 70, 70);
+            color: #116a68;
+            font-weight: 600;    
+        }
+
+        .about-cards-part{
+
+            @include mobile{
+                // background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            
+            .about-row1{
+                display: flex;
+                gap: 1.5rem;
+                // background-color: red;
+
+                @include mobile{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90%;
+                    
+                } 
+                  
+            }
+            .about-row1{
+                display: flex;
+                gap: 1.5rem;
+                // background-color: red;
+
+                @include mobile{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90%;
+                    
+                } 
+                  
+            }
+        }
+    }
+}

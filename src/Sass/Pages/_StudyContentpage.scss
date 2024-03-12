@@ -1,0 +1,48 @@
+@import '../Abstracts/Mixin';
+
+.study-content-page-main {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .study-content-page-image {
+        width: 100%;
+        height: 100vh;
+
+        .study-content-page-image-body {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .page-heading-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: rgb(79, 78, 78);
+    }
+
+    .study-main-content-card-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: max-content;
+
+
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col {
+            width: 12%;
+            margin: 15px;
+        }
+    }
+}

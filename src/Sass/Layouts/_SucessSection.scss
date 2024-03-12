@@ -1,0 +1,39 @@
+@import '../Abstracts/Mixin';
+
+
+.sucess-section-intro-content {
+    .sucess-section-title {
+        display: flex;
+        color: rgb(71, 69, 69);
+        font-weight: bolder !important;
+        font-size: 2rem !important;
+        @include mobile{
+            margin-top: 6rem;
+        }
+    }
+
+    .sucess-section-description {
+        color: rgb(67, 64, 64);
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+       
+    }
+
+    .sucess-section-btn {
+        background-color: grey;
+        padding: 1rem;
+        border-radius: 10px;
+        color: white;
+    }
+}
+.sucess-section-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bolder;
+      @include mobile{
+        margin-top: 170px;
+      }
+}

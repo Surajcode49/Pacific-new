@@ -1,0 +1,34 @@
+@import "./Variables";
+@mixin tablet {
+  @media ($mobile <= width <=$tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (width <=$mobile) {
+    @content;
+  }
+}
+@mixin mobile1 {
+  @media (width<=$mobile1) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media ($tablet <= width <= $laptop) {
+    @content;
+  }
+}
+@mixin laptopl {
+  @media (width > $laptop) {
+    @content;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-align: justify;
+}
+

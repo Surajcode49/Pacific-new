@@ -1,0 +1,59 @@
+@import '../Abstracts/Mixin';
+
+.svg-container {
+  // background-color: rgb(3, 59, 155);
+  background-color: white;
+  z-index: 1;
+  height: 75vh;
+  max-width: 100vw;
+  // position: relative;
+
+  @include mobile{
+    height: 30vh;
+  }
+}
+
+.planePath {
+  // stroke: #D9DADA;
+  stroke: rgb(116, 114, 114);
+  stroke-width: 0.1%;
+  stroke-width: 0.5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
+
+
+
+.earth-main {
+  // z-index: 0;
+  display: flex;
+  position: relative;
+  width: 30.3vw;
+  top: -34.5rem;
+  left: 700px;
+  @include mobile{
+    top: -9.5rem;
+    left: 180px;
+  }
+  @include laptop{
+    top: -22rem;
+    left: 400px;
+  }
+}

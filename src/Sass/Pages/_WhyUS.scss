@@ -1,0 +1,44 @@
+@import '../Abstracts/Mixin';
+
+.whyus-main{
+    max-width: 100vw;
+    padding: 2rem;
+
+    .whyus-main-list{
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        color: rgb(79, 78, 78);
+        text-align: justify;
+        padding: 0.5rem 2rem;
+
+        .whyus-main-list-body{
+            list-style: decimal;
+            padding: 0.5rem 0.5rem;
+            
+            .why-list-title{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.whyus-parallax-1 {
+    // background: url('../../Assets/why\ us.webp') no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
+    // height: 150vh;
+    // object-fit: cover;
+    max-width: 100vw;
+    // height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .whyimg{
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}

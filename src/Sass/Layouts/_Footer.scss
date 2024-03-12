@@ -1,0 +1,137 @@
+@import "../Abstracts/Mixin";
+
+.footer-main {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  @include mobile {
+    margin-top: 120px;
+  }
+
+  .footer-part {
+    width: 80%;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include mobile {
+      padding: 1rem;
+    }
+
+    .social-media {
+      width: fit-content;
+      font-size: 2rem;
+      margin-top: 4rem;
+
+      a {
+        display: inline-flex;
+        width: 45px;
+        height: 45px;
+        align-items: center;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 25px;
+        color: #33beda;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+          background: #4fa7b0;
+          color: #fff;
+          border-color: #4fa7b0;
+          align-items: center;
+        }
+      }
+    }
+
+    .footer-lower-part {
+      display: flex;
+      width: 90vw;
+      justify-content: space-evenly;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      .footer-lower-main {
+        margin-top: 30px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        .footer-title {
+          color: #aaa;
+          text-transform: uppercase;
+          font-size: 22px;
+          border-left: 4px solid #4fa7b0;
+          padding-left: 5px;
+        }
+
+        .list-unstyled {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            display: block;
+            color: #525151;
+            padding: 2px 0;
+            font-weight: 600;
+            padding-left: 0.5rem;
+
+            &:hover {
+              color: #4fa7b0;
+            }
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          color: black;
+          font-weight: 550;
+        }
+      }
+    }
+  }
+
+  .copyright-part {
+    width: 100%;
+    margin-top: 15px;
+    background: #111;
+    padding: 7px 0;
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    .copy-right-content {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.container11 {
+  width: 100%;
+
+  @include mobile {
+    width: 99vw;
+  }
+}

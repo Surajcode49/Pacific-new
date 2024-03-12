@@ -1,0 +1,94 @@
+@import '../Abstracts/Mixin';
+
+.appointment-main {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 100vw;
+    padding-top: 2rem;
+
+    .appint-i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100vw;
+        height: 60vh;
+
+        .app-img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .appointment-part {
+        width: 100%;
+        padding: 2rem;
+        // position: relative;
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        
+        .appointment-right{
+            width: 100%;
+            // background-color: red;
+
+            
+
+            .appointment-btn-part {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .appointment-btn {
+                    padding: 1.2rem;
+                    font-size: 1rem;
+                    background-color: #4fbc9d;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    -webkit-box-shadow: 18px 23px 34px -15px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: 18px 23px 34px -15px rgba(0, 0, 0, 0.75);
+                    box-shadow: 18px 23px 34px -15px rgba(0, 0, 0, 0.75);
+                }
+
+            }
+
+            .appointment-icons{
+                padding: 10px;
+                width: auto;
+                height: 5rem;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                gap: 1rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.appointment-left::after{
+    content: "";
+    width: 1.5px;
+    height: 10vh;
+    display: block;
+    background-color: rgb(185, 181, 181);
+    position: absolute;
+    right: 0;
+
+    @include mobile{
+        display: none;
+    }
+    // top: 1px;
+    // transform: translateY(-50%);
+}

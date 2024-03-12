@@ -1,0 +1,42 @@
+@import '../Abstracts/Mixin';
+
+.popular-cards-main{
+    // background-color: blue;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover{
+        box-shadow: 10px 13px 31px -7px rgba(0,0,0,0.75);
+    }
+    
+
+
+    .popular-course-cards-part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        .popular-cards-content{
+            padding-top: 1rem;
+
+            .popular-card-title{
+                font-weight: 600;
+                font-size: 1.2rem;
+                text-align: center;
+            }
+            .popular-lists{
+                list-style: none;
+                text-align: center !important;
+                padding: 10px;
+                font-size: 0.8rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,262 @@
+@import '../Abstracts/Mixin';
+
+.navbar-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5rem;
+    background-color: white;
+    max-width: 100vw;
+    height: auto;
+
+
+    @include mobile {
+        height: 5rem;
+        padding: 0rem 1rem;
+        max-width: 100vw;
+
+    }
+
+    .humberger {
+        display: none;
+
+        @include mobile {
+            display: initial;
+            cursor: pointer;
+        }
+    }
+
+    .navbar-logo {
+
+        @include mobile {
+            width: fit-content;
+            display: none;
+        }
+
+        .nav-title {
+            display: none;
+
+            @include mobile {
+                display: initial;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #183236;
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            width: auto;
+
+            background-color: transparent;
+
+
+            @include mobile {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .destop-version {
+        // background-color: red;
+        color: #4fa7b0;
+
+        @include mobile {
+            display: none;
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            color: #4fa7b0;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+
+            @include mobile {
+                position: absolute;
+                top: 79px;
+                left: 0;
+                width: 100%;
+                background-color: #116a68;
+                justify-content: center;
+                align-items: center;
+                padding-top: 2rem;
+                z-index: 1;
+                transition: 0.8s;
+                visibility: hidden;
+                opacity: 0;
+                height: 90vh;
+                border-top-right-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        .toggle {
+            left: -89px;
+            padding-left: 2rem;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .mobile-version {
+        display: none;
+        z-index: 600;
+        overflow: hidden;
+
+        @include mobile {
+            display: initial;
+
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            color: #4fa7b0;
+            // justify-content: center;
+            // align-items: center;
+            text-decoration: none;
+
+            @include mobile {
+                position: absolute;
+                top: 79px;
+                left: 0;
+                width: 100vw;
+                // background-color: #116a68;
+                background-color: rgb(228, 228, 228);
+                // justify-content: center;
+                // align-items: center;
+                // padding-top: 2rem;
+
+                transition: 0.4s ease-in-out;
+                visibility: hidden;
+                opacity: 0;
+                min-height: 100vh;
+                // border-top-right-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding-bottom: 4rem;
+
+
+            }
+
+            .mobile-drop {
+                // background-color: red;
+                width: 100vw;
+                position: relative;
+
+
+                .drop-title {
+                    padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .drop-icon {
+                        font-size: 1.8rem;
+                    }
+
+                }
+
+                .drops-item {
+                    .drop-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.2rem;
+                        padding: 20px;
+                        background-color: rgb(221, 218, 218);
+                        font-weight: 700;
+                        color: black;
+                        // background-color: red;
+                        // .drop-items-list{
+
+                        // }
+
+                        .drop-items-list{
+                            color: #4fa7b0;
+                            font-weight: 500;
+                        }
+                        
+
+                    }
+                }
+            }
+        }
+
+        .toggle {
+            left: 0;
+            // padding-left: 2rem;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+
+    .contact-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 20px;
+        background-color: #116a68;
+        color: white !important;
+        border: none;
+        border-radius: 50%;
+        padding: 1rem;
+        font-weight: 700;
+        color: rgb(82, 79, 79);
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        color: #4fa7b0;
+
+        .login-link {
+            color: white;
+            font-weight: 600;
+            background-color: #4fa7b0;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+    }
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-item:before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+.navbar-item:hover:before {
+    height: 100%;
+}
+
+// .drop-items-list:hover{
+//     background-color: #40b9b9;
+//     color: white;
+//     padding-left: 0.2rem;
+//     font-size: 14px;
+// }

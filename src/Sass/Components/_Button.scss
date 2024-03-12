@@ -1,0 +1,16 @@
+@import "../Abstracts/Mixin";
+
+.btn-common {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  .btn-form-submit-common {
+    background-color: #4a915e;
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}

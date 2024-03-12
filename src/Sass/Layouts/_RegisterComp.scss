@@ -1,0 +1,34 @@
+@import "../Abstracts/Mixin";
+
+.reg-compo-main {
+  max-width: 100vw;
+
+  .reg-comp-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1b4bb3;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+  .reg-comp-subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+
+    @include mobile {
+      font-size: 0.8rem;
+    }
+  }
+}
+.studylevel {
+  margin-left: 0rem;
+}

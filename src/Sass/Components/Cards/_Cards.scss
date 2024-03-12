@@ -1,0 +1,32 @@
+@import '../../Abstracts/Mixin';
+
+.card-main {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border: none;
+
+    // margin: 16px;
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .card-content {
+        padding: 16px;
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .card-text{
+            font-size: 1rem;
+            color: #555;
+        }
+    }
+}

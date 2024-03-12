@@ -1,0 +1,53 @@
+@import '../Abstracts/Mixin';
+
+.blog-page-main {
+    // background-color: red;
+    max-width: 100vw;
+    padding: 3rem;
+
+    @include mobile {
+        padding: 1rem;
+    }
+
+    .blogpage-main-part {
+        padding: 0px 4rem;
+
+        @include mobile {
+            padding: 0.4rem 1rem;
+        }
+
+        .blogpages-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #058463;
+        }
+
+        .blogpages-subtitle {
+            padding-top: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #058463;
+            padding-bottom: 1rem;
+        }
+
+        .blog-page-text-content {
+            text-align: justify;
+            font-weight: 600;
+        }
+
+        .blog-cards-list {
+            display: flex;
+            // flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding-top: 2rem;
+            @include mobile{
+                display: flex;
+                flex-wrap: wrap;
+               
+                background-size: contain;
+            }
+        }
+    }
+}

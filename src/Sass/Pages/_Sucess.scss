@@ -1,0 +1,408 @@
+/* Media Queries */
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+
+  .logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /* Fix for safari gap */
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Shrinking for mobile */
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@mixin mq-xs {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin mq-sm {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (min-width: 720px) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+$background: #f7f7f7;
+$box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+$border: 1px solid rgba(191, 191, 191, 0.4);
+$items: 5;
+$rows: ceil($items/2);
+
+/* Card sizing */
+
+$card-height: 400px;
+$card-width: 450px;
+$inner-margin: 15px;
+$number-size: 35px;
+$stagger: 180px;
+$outer-margin: 90px;
+$marker-size: 9px;
+
+/* Colors */
+
+$steps: #46b8e9;
+$colors: #46b8e9, #3ee9d1, #ce43eb, #4d92eb;
+$timeline: #565252;
+
+/* Calculations */
+
+$container-height: $rows * ($card-height + $outer-margin) + $stagger;
+$container-width: $card-width * 2 + $outer-margin * 3;
+$head-height: $number-size + 50;
+$body-height: $card-height - $head-height;
+$marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
+
+/* Placeholders */
+
+@include mq-lg {
+  %arrow {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  %marker {
+    position: absolute;
+    content: "";
+    width: $marker-size;
+    height: $marker-size;
+    background-color: $timeline;
+    border-radius: $marker-size;
+    box-shadow: 0px 0px 2px 8px $background;
+  }
+}
+
+/* Some Cool Stuff */
+
+$counter: $items - $rows + 2;
+@for $i from 1 through $rows {
+  .demo-card:nth-child(#{$i*2-1}) {
+    order: $i;
+  }
+  .demo-card:nth-child(#{$i*2}) {
+    order: $counter;
+  }
+  $counter: $counter + 1;
+}
+
+/* Border Box */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+body {
+  font-family: Roboto;
+}
+
+#timeline {
+  padding: 100px 0;
+  background: $background;
+  border-top: $border;
+  border-bottom: $border;
+  margin-top: 1rem;
+  background-color: white;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+  p.leader {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 45px;
+  }
+  .demo-card-wrapper {
+    position: relative;
+    margin: auto;
+    @include mq-lg {
+      display: flex;
+      flex-flow: column wrap;
+      width: $container-width;
+      height: $container-height;
+      margin: 0 auto;
+    }
+    &::after {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: $border;
+      @include mq-lg {
+        border-left: 1px solid $timeline;
+      }
+    }
+  }
+  .demo-card {
+    position: relative;
+    display: block;
+    margin: 10px auto 80px;
+    max-width: 94%;
+    z-index: 2;
+    @include mq-sm {
+      max-width: 60%;
+      box-shadow: $box-shadow;
+    }
+    @include mq-md {
+      max-width: 40%;
+    }
+    @include mq-lg {
+      max-width: $card-width;
+      height: $card-height;
+      margin: $outer-margin;
+      margin-top: $outer-margin/2;
+      margin-bottom: $outer-margin/2;
+      &:nth-child(odd) {
+        margin-right: $outer-margin/2;
+        .head::after {
+          @extend %arrow;
+          border-left-width: 15px;
+          border-left-style: solid;
+          left: 100%;
+        }
+        .head::before {
+          @extend %marker;
+          left: $marker-dist + 1;
+        }
+      }
+      &:nth-child(even) {
+        margin-left: $outer-margin/2;
+        .head::after {
+          @extend %arrow;
+          border-right-width: 15px;
+          border-right-style: solid;
+          right: 100%;
+        }
+        .head::before {
+          @extend %marker;
+          right: $marker-dist - 1;
+        }
+      }
+      &:nth-child(2) {
+        margin-top: $stagger;
+      }
+    }
+    .head {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: 400;
+      .number-box {
+        display: inline;
+        float: left;
+        margin: $inner-margin;
+        padding: 10px;
+        font-size: $number-size;
+        line-height: $number-size;
+        font-weight: 600;
+        background: rgba(0, 0, 0, 0.17);
+      }
+      h2 {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        font-weight: inherit;
+        letter-spacing: 2px;
+        margin: 0;
+        padding-bottom: 6px;
+        line-height: 1rem;
+        @include mq-sm {
+          font-size: 165%;
+          line-height: 1.2rem;
+        }
+        span {
+          display: block;
+          font-size: 0.6rem;
+          margin: 0;
+          @include mq-sm {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .body {
+      background: #fff;
+      border: $border;
+      border-top: 0;
+      padding: $inner-margin;
+      @include mq-lg {
+        height: $body-height;
+      }
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: $inner-margin;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    @for $i from 1 through $items {
+      &--step#{$i} {
+        $color: nth($colors, ((($i - 1) % 4) + 1));
+        background-color: $color;
+        .head::after {
+          border-color: $color;
+        }
+      }
+    }
+  }
+}
+@keyframes myanimation {
+  0% {
+    transform: translateY(calc(-40% + 50vh));
+    -webkit-transform: translateY(calc(-50% + 50vh));
+  }
+  25% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(calc(-100% + 100vh));
+    -webkit-transform: translateY(calc(-100% + 100vh));
+  }
+  100% {
+    transform: translateY(calc(-40% + 50vh));
+    -webkit-transform: translateY(calc(-50% + 50vh));
+  }
+}
+
+@keyframes myanimationtwo {
+  0% {
+    transform: translateY(calc(-70% + 100vh));
+    -webkit-transform: translateY(calc(-70% + 100vh));
+  }
+  25% {
+    transform: translateY(calc(-100% + 100vh));
+    -webkit-transform: translateY(calc(-100% + 100vh));
+  }
+  75% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(calc(0%));
+  }
+  100% {
+    transform: translateY(calc(-70% + 100vh));
+    -webkit-transform: translateY(calc(-70% + 100vh));
+  }
+}

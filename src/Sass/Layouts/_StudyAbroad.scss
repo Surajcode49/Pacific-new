@@ -1,0 +1,11 @@
+@import '../Abstracts/Mixin';
+
+.study-abroad-main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // background-color: red;
+    padding: 5rem;
+    gap: 5rem;
+   
+}
